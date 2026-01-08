@@ -3,7 +3,7 @@ REM ============================================================================
 REM SCRIPT INTELIGENTE: DETECTA PORTA BACKEND E ATUALIZA FRONTEND AUTOMATICAMENTE
 REM ============================================================================
 REM Este script:
-REM 1. Detecta qual porta o Backend está usando
+REM 1. Detecta qual porta o Backend estï¿½ usando
 REM 2. Atualiza o Frontend automaticamente
 REM 3. Abre Frontend no terminal correto
 REM ============================================================================
@@ -11,7 +11,7 @@ REM ============================================================================
 setlocal enabledelayedexpansion
 title MeuTeste - Smart Port Detector
 
-set FRONTEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste\meu-teste-front
+set FRONTEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste\meu-teste-front
 set ENV_FILE=%FRONTEND_PATH%\src\environments\environment.ts
 
 cls
@@ -20,18 +20,18 @@ echo ===========================================================================
 echo                   DETECTOR DE PORTA INTELIGENTE
 echo ============================================================================
 echo.
-echo Este script detecta qual porta o Backend está usando
+echo Este script detecta qual porta o Backend estï¿½ usando
 echo e atualiza o Frontend automaticamente!
 echo.
 echo ============================================================================
 echo.
 
 REM Menu para escolher a porta
-echo [1] Backend em http://localhost:5000 (padrão)
+echo [1] Backend em http://localhost:5000 (padrï¿½o)
 echo [2] Backend em http://localhost:5238 (launchSettings atual)
 echo [3] Outra porta (digite manualmente)
 echo.
-set /p choice="Qual porta o Backend está usando? (1-3): "
+set /p choice="Qual porta o Backend estï¿½ usando? (1-3): "
 
 if "%choice%"=="1" (
     set BACKEND_PORT=5000

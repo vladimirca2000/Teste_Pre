@@ -1,17 +1,17 @@
 @echo off
 REM ============================================================================
-REM SCRIPT AVANÇADO: BACKEND EM UM TERMINAL + FRONTEND EM OUTRO
+REM SCRIPT AVANï¿½ADO: BACKEND EM UM TERMINAL + FRONTEND EM OUTRO
 REM ============================================================================
 REM Este script abre dois terminais simultaneamente:
 REM - Terminal 1: Backend
-REM - Terminal 2: Frontend (após confirmação)
+REM - Terminal 2: Frontend (apï¿½s confirmaï¿½ï¿½o)
 REM ============================================================================
 
 setlocal enabledelayedexpansion
 title MeuTeste - Terminal Manager
 
-REM Configuração
-set BACKEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste
+REM Configuraï¿½ï¿½o
+set BACKEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste
 set FRONTEND_PATH=%BACKEND_PATH%\meu-teste-front
 
 REM Cores
@@ -58,7 +58,7 @@ if "%choice%"=="4" exit /b 0
 goto MENU
 
 REM ============================================================================
-REM OPÇÃO 1: ABRIR BACKEND EM NOVO TERMINAL
+REM OPï¿½ï¿½O 1: ABRIR BACKEND EM NOVO TERMINAL
 REM ============================================================================
 :OPEN_BACKEND_TERMINAL
 cls
@@ -80,7 +80,7 @@ pause
 goto MENU
 
 REM ============================================================================
-REM OPÇÃO 2: ABRIR FRONTEND EM NOVO TERMINAL
+REM OPï¿½ï¿½O 2: ABRIR FRONTEND EM NOVO TERMINAL
 REM ============================================================================
 :OPEN_FRONTEND_TERMINAL
 cls
@@ -102,7 +102,7 @@ pause
 goto MENU
 
 REM ============================================================================
-REM OPÇÃO 3: ABRIR BACKEND + FRONTEND (DOIS TERMINAIS)
+REM OPï¿½ï¿½O 3: ABRIR BACKEND + FRONTEND (DOIS TERMINAIS)
 REM ============================================================================
 :OPEN_BOTH_TERMINALS
 cls

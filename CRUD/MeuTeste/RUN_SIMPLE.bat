@@ -1,10 +1,10 @@
 @echo off
 REM ============================================================================
-REM SCRIPT SIMPLES: EXECUTAR BACKEND + AGUARDAR CONFIRMAÇÃO + EXECUTAR FRONTEND
+REM SCRIPT SIMPLES: EXECUTAR BACKEND + AGUARDAR CONFIRMAï¿½ï¿½O + EXECUTAR FRONTEND
 REM ============================================================================
-REM Este é o script mais simples e direto
+REM Este ï¿½ o script mais simples e direto
 REM 1. Executa Backend
-REM 2. Aguarda confirmação (Y/N)
+REM 2. Aguarda confirmaï¿½ï¿½o (Y/N)
 REM 3. Se sim, abre um novo terminal com Frontend
 REM ============================================================================
 
@@ -14,8 +14,8 @@ title MeuTeste - Backend First
 REM Cores
 color 0A
 
-REM Configuração
-set BACKEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste
+REM Configuraï¿½ï¿½o
+set BACKEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste
 set FRONTEND_PATH=%BACKEND_PATH%\meu-teste-front
 
 REM ============================================================================
@@ -57,7 +57,7 @@ if "%menu_choice%"=="4" exit /b 0
 goto MENU
 
 REM ============================================================================
-REM OPÇÃO 1: BACKEND PRIMEIRO, DEPOIS FRONTEND
+REM OPï¿½ï¿½O 1: BACKEND PRIMEIRO, DEPOIS FRONTEND
 REM ============================================================================
 :BACKEND_FIRST
 cls
@@ -92,7 +92,7 @@ REM Se o backend foi encerrado
 goto MENU
 
 REM ============================================================================
-REM OPÇÃO 2: APENAS BACKEND
+REM OPï¿½ï¿½O 2: APENAS BACKEND
 REM ============================================================================
 :BACKEND_ONLY
 cls
@@ -125,7 +125,7 @@ dotnet run --project MeuTeste.Presentation
 goto MENU
 
 REM ============================================================================
-REM OPÇÃO 3: APENAS FRONTEND
+REM OPï¿½ï¿½O 3: APENAS FRONTEND
 REM ============================================================================
 :FRONTEND_ONLY
 cls

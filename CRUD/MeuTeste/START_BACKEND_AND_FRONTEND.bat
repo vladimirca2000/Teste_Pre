@@ -1,12 +1,12 @@
 @echo off
 REM ============================================================================
-REM SCRIPT PARA EXECUTAR BACKEND E FRONTEND EM SEQUÊNCIA
+REM SCRIPT PARA EXECUTAR BACKEND E FRONTEND EM SEQUï¿½NCIA
 REM ============================================================================
 REM Este script:
 REM 1. Navega para a pasta do Backend
 REM 2. Compila o Backend (dotnet build)
 REM 3. Executa o Backend (dotnet run)
-REM 4. Aguarda confirmação do usuário
+REM 4. Aguarda confirmaï¿½ï¿½o do usuï¿½rio
 REM 5. Se confirmado (Y), abre um novo terminal com o Frontend
 REM ============================================================================
 
@@ -21,8 +21,8 @@ echo ===========================================================================
 echo.
 
 REM Definir caminhos
-set BACKEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste
-set FRONTEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste\meu-teste-front
+set BACKEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste
+set FRONTEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste\meu-teste-front
 
 REM Verificar se os caminhos existem
 if not exist "%BACKEND_PATH%" (
@@ -73,7 +73,7 @@ echo.
 echo ? Aguardando Backend iniciar...
 echo.
 
-REM Executar backend em modo backgroundREM Vamos executar o backend em uma forma que permita continuação
+REM Executar backend em modo backgroundREM Vamos executar o backend em uma forma que permita continuaï¿½ï¿½o
 dotnet run --project MeuTeste.Presentation
 
 REM Se chegou aqui, backend foi fechado
@@ -86,7 +86,7 @@ if %errorlevel% neq 0 (
 )
 
 REM ============================================================================
-REM FASE 2: AGUARDAR CONFIRMAÇÃO DO USUÁRIO
+REM FASE 2: AGUARDAR CONFIRMAï¿½ï¿½O DO USUï¿½RIO
 REM ============================================================================
 echo.
 echo.
@@ -100,7 +100,7 @@ echo.
 echo.
 echo PROXIMOS PASSOS:
 echo ? Teste o Backend em outro terminal (CURL tests)
-echo ? Verifique se tudo está funcionando
+echo ? Verifique se tudo estï¿½ funcionando
 echo ? Quando pronto, confirme para iniciar o Frontend
 echo.
 set /p continue="Deseja continuar com o Frontend? (S/N): "

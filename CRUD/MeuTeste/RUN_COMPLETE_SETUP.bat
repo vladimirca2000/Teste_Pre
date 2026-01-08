@@ -1,27 +1,27 @@
 @echo off
 REM ============================================================================
-REM SCRIPT COMPLETO PARA SETUP E EXECUÇÃO - BACKEND E FRONTEND
+REM SCRIPT COMPLETO PARA SETUP E EXECUï¿½ï¿½O - BACKEND E FRONTEND
 REM ============================================================================
 REM Autor: GitHub Copilot
 REM Data: 2026-01-08
-REM Descrição: Gerencia a execução do Backend e Frontend em sequência
+REM Descriï¿½ï¿½o: Gerencia a execuï¿½ï¿½o do Backend e Frontend em sequï¿½ncia
 REM ============================================================================
 
 setlocal enabledelayedexpansion
 
 REM ============================================================================
-REM CONFIGURAÇÃO INICIAL
+REM CONFIGURAï¿½ï¿½O INICIAL
 REM ============================================================================
 title MeuTeste - Backend + Frontend Manager
 color 0A
 
-set BACKEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste
-set FRONTEND_PATH=C:\Users\hibit\source\repos\teste\back\MeuTeste\meu-teste-front
+set BACKEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste
+set FRONTEND_PATH=C:\Users\hibit\source\repos\teste\CRUD\MeuTeste\meu-teste-front
 set BACKEND_PORT=5000
 set FRONTEND_PORT=4200
 
 REM ============================================================================
-REM FUNÇÃO: EXIBIR MENU PRINCIPAL
+REM FUNï¿½ï¿½O: EXIBIR MENU PRINCIPAL
 REM ============================================================================
 :MENU_PRINCIPAL
 cls
@@ -50,7 +50,7 @@ if "%choice%"=="6" goto EXIT_SCRIPT
 goto MENU_PRINCIPAL
 
 REM ============================================================================
-REM OPÇÃO 1: EXECUTAR BACKEND + FRONTEND (SEQUENCIAL)
+REM OPï¿½ï¿½O 1: EXECUTAR BACKEND + FRONTEND (SEQUENCIAL)
 REM ============================================================================
 :EXEC_BACKEND_AND_FRONTEND
 cls
@@ -127,7 +127,7 @@ REM Se chegou aqui, backend foi fechado
 goto MENU_PRINCIPAL
 
 REM ============================================================================
-REM OPÇÃO 2: APENAS BACKEND
+REM OPï¿½ï¿½O 2: APENAS BACKEND
 REM ============================================================================
 :EXEC_BACKEND_ONLY
 cls
@@ -167,7 +167,7 @@ dotnet run --project MeuTeste.Presentation
 goto MENU_PRINCIPAL
 
 REM ============================================================================
-REM OPÇÃO 3: APENAS FRONTEND
+REM OPï¿½ï¿½O 3: APENAS FRONTEND
 REM ============================================================================
 :EXEC_FRONTEND_ONLY
 cls
@@ -209,7 +209,7 @@ npx ng serve
 goto MENU_PRINCIPAL
 
 REM ============================================================================
-REM OPÇÃO 4: TESTAR BACKEND COM CURL
+REM OPï¿½ï¿½O 4: TESTAR BACKEND COM CURL
 REM ============================================================================
 :TEST_BACKEND
 cls
@@ -249,12 +249,12 @@ goto TEST_BACKEND
 :TEST_CATEGORIES
 cls
 echo.
-echo ??  Este teste requer um token JWT válido
+echo ??  Este teste requer um token JWT vï¿½lido
 echo.
 set /p token="Cole o token JWT (ou pressione ENTER para usar um token de teste): "
 if "%token%"=="" (
     echo.
-    echo Usando teste sem autenticação...
+    echo Usando teste sem autenticaï¿½ï¿½o...
     curl http://localhost:%BACKEND_PORT%/api/categories
 ) else (
     echo.
@@ -286,7 +286,7 @@ pause
 goto TEST_BACKEND
 
 REM ============================================================================
-REM OPÇÃO 5: LIMPAR node_modules E REINSTALAR
+REM OPï¿½ï¿½O 5: LIMPAR node_modules E REINSTALAR
 REM ============================================================================
 :CLEAN_INSTALL
 cls
