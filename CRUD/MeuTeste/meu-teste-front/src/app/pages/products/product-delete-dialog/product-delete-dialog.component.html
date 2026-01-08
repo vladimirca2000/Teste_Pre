@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>
+  <mat-icon color="warn">warning</mat-icon>
+  Deletar Produto
+</h2>
+
+<mat-dialog-content>
+  <p>Tem certeza que deseja deletar o produto <strong>{{ data.product.name }}</strong>?</p>
+  <p class="warning-text">Esta ação não pode ser desfeita.</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="warn" (click)="confirm()" [disabled]="isLoading">
+    Deletar
+  </button>
+</mat-dialog-actions>

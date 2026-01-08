@@ -1,0 +1,81 @@
+<mat-toolbar color="primary" class="navbar-container">
+  <span class="navbar-brand">Meu Teste App</span>
+  <span class="spacer"></span>
+
+  <!-- Menu quando autenticado -->
+  <ng-container *ngIf="isAuthenticated$ | async">
+    <button mat-button [matMenuTriggerFor]="menu" class="nav-button">
+      <mat-icon>category</mat-icon>
+      <span class="button-label">Categorias</span>
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="productMenu" class="nav-button">
+      <mat-icon>shopping_cart</mat-icon>
+      <span class="button-label">Produtos</span>
+    </button>
+
+    <!-- Menu Admin -->
+    <ng-container *ngIf="isAdmin()">
+      <button mat-button [matMenuTriggerFor]="adminMenu" class="nav-button admin-button">
+        <mat-icon>admin_panel_settings</mat-icon>
+        <span class="button-label">Admin</span>
+      </button>
+    </ng-container>
+
+    <!-- Menu Usuário -->
+    <button mat-button [matMenuTriggerFor]="userMenu" class="nav-button user-button">
+      <mat-icon>account_circle</mat-icon>
+      <span class="button-label">{{ getUsername() }}</span>
+    </button>
+  </ng-container>
+
+  <!-- Menu quando não autenticado -->
+  <ng-container *ngIf="!(isAuthenticated$ | async)">
+    <button mat-button routerLink="/login" class="nav-button">
+      <mat-icon>login</mat-icon>
+      <span class="button-label">Login</span>
+    </button>
+
+    <button mat-button routerLink="/register" class="nav-button">
+      <mat-icon>person_add</mat-icon>
+      <span class="button-label">Registrar</span>
+    </button>
+  </ng-container>
+</mat-toolbar>
+
+<!-- Menu Categorias -->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/categories">
+    <mat-icon>list</mat-icon>
+    <span>Listar Categorias</span>
+  </button>
+</mat-menu>
+
+<!-- Menu Produtos -->
+<mat-menu #productMenu="matMenu">
+  <button mat-menu-item routerLink="/products">
+    <mat-icon>list</mat-icon>
+    <span>Listar Produtos</span>
+  </button>
+</mat-menu>
+
+<!-- Menu Admin -->
+<mat-menu #adminMenu="matMenu">
+  <button mat-menu-item routerLink="/admin/approve-users">
+    <mat-icon>verified_user</mat-icon>
+    <span>Aprovar Usuários</span>
+  </button>
+</mat-menu>
+
+<!-- Menu Usuário -->
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item routerLink="/change-password">
+    <mat-icon>vpn_key</mat-icon>
+    <span>Alterar Senha</span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+}
+
+/* Material Icons adjustments */
+.mat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Material Card padding */
+mat-card {
+  margin: 16px;
+}
+
+mat-card-header {
+  margin: -16px -16px 16px -16px;
+  padding: 16px 16px 0 16px;
+}
+
+/* Material Button spacing */
+button[mat-button],
+button[mat-raised-button],
+button[mat-icon-button] {
+  margin: 0 4px;
+}
+
+/* Material Form Field */
+mat-form-field {
+  width: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

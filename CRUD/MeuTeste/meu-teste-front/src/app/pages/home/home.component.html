@@ -1,0 +1,87 @@
+<div class="home-container">
+  <!-- Não Autenticado -->
+  <ng-container *ngIf="!(isAuthenticated$ | async)">
+    <mat-card class="welcome-card">
+      <mat-card-header>
+        <mat-card-title>Bem-vindo ao Meu Teste App</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>Esta é uma aplicação Angular + .NET 8 para gerenciar categorias e produtos.</p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <mat-icon>category</mat-icon>
+            <h3>Gerenciar Categorias</h3>
+            <p>Crie, edite e exclua categorias de produtos</p>
+          </div>
+
+          <div class="feature-item">
+            <mat-icon>shopping_cart</mat-icon>
+            <h3>Gerenciar Produtos</h3>
+            <p>Organize seus produtos com categorias</p>
+          </div>
+
+          <div class="feature-item">
+            <mat-icon>security</mat-icon>
+            <h3>Segurança</h3>
+            <p>Autenticação JWT com controle de permissões</p>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <button mat-raised-button color="primary" routerLink="/login">
+            <mat-icon>login</mat-icon>
+            Entrar
+          </button>
+
+          <button mat-raised-button routerLink="/register">
+            <mat-icon>person_add</mat-icon>
+            Registrar
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+
+  <!-- Autenticado -->
+  <ng-container *ngIf="isAuthenticated$ | async">
+    <mat-card class="welcome-card authenticated">
+      <mat-card-header>
+        <mat-card-title>Bem-vindo, {{ getUsername() }}!</mat-card-title>
+        <mat-card-subtitle>Escolha uma opção abaixo para começar</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="menu-grid">
+          <!-- Categorias -->
+          <mat-card class="menu-card" routerLink="/categories">
+            <mat-card-content>
+              <mat-icon class="menu-icon">category</mat-icon>
+              <h2>Categorias</h2>
+              <p>Gerenciar categorias de produtos</p>
+            </mat-card-content>
+          </mat-card>
+
+          <!-- Produtos -->
+          <mat-card class="menu-card" routerLink="/products">
+            <mat-card-content>
+              <mat-icon class="menu-icon">shopping_cart</mat-icon>
+              <h2>Produtos</h2>
+              <p>Gerenciar produtos da plataforma</p>
+            </mat-card-content>
+          </mat-card>
+
+          <!-- Alterar Senha -->
+          <mat-card class="menu-card" routerLink="/change-password">
+            <mat-card-content>
+              <mat-icon class="menu-icon">vpn_key</mat-icon>
+              <h2>Alterar Senha</h2>
+              <p>Atualize sua senha de acesso</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>

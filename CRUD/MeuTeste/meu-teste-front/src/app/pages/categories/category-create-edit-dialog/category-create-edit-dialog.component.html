@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>
+  {{ isEditMode ? 'Editar Categoria' : 'Nova Categoria' }}
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nome da Categoria</mat-label>
+      <input matInput formControlName="name" placeholder="Ex: Eletrônicos">
+      <mat-error *ngIf="name?.hasError('required')">
+        Nome é obrigatório
+      </mat-error>
+      <mat-error *ngIf="name?.hasError('minlength')">
+        Nome deve ter no mínimo 3 caracteres
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="save()" [disabled]="isLoading || form.invalid">
+    {{ isEditMode ? 'Atualizar' : 'Criar' }}
+  </button>
+</mat-dialog-actions>

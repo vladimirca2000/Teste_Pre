@@ -1,0 +1,91 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px !important;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 64px;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-button mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.button-label {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.admin-button {
+  background-color: rgba(255, 193, 7, 0.15);
+  border-left: 3px solid rgba(255, 193, 7, 0.8);
+}
+
+.admin-button:hover {
+  background-color: rgba(255, 193, 7, 0.25);
+}
+
+.user-button {
+  margin-left: 16px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 8px !important;
+    min-height: 56px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .nav-button {
+    margin: 0 4px;
+    padding: 6px 8px;
+  }
+
+  .button-label {
+    display: none;
+  }
+
+  .user-button {
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: none;
+  }
+}

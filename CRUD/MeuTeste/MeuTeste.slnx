@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/00-Front/">
+    <Project Path="meu-teste-front/meu-teste-front.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/01-API/">
+    <Project Path="MeuTeste.Presentation/MeuTeste.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/02-Serviço/">
+    <Project Path="MeuTeste.Application/MeuTeste.Application.csproj" />
+  </Folder>
+  <Folder Name="/03-Dominio/">
+    <Project Path="MeuTeste.Domain/MeuTeste.Domain.csproj" />
+  </Folder>
+  <Folder Name="/04-Infrastructure/">
+    <Project Path="MeuTeste.Infrastructure.Data/MeuTeste.Infrastructure.Data.csproj" />
+    <Project Path="MeuTeste.Infrastructure/MeuTeste.Infrastructure.csproj" />
+  </Folder>
+</Solution>

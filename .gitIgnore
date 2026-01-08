@@ -1,4 +1,70 @@
-# .gitignore para projetos Angular e .NET
+# Visual Studio config
+.vs/
+###############################
+# .gitignore para Angular e .NET
+###############################
+
+# Node (Angular)
+node_modules/
+dist/
+tmp/
+out-tsc/
+coverage/
+public/
+
+# Angular environment files
+src/environments/environment*.ts
+
+# Editor e sistema
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# Logs
+*.log
+
+# .NET
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
+*.vspscc
+*.vssscc
+*.dbmdl
+*.pdb
+*.cache
+*.mdb
+*.opendb
+*.VC.db
+*.vscode/
+*.DS_Store
+
+# Pacotes
+packages/
+*.nupkg
+*.snupkg
+
+# Configurações locais
+*.local.json
+appsettings.Development.json
+
+# Outros
+logs/
+*.tgz
+*.zip
+*.tar.gz
+*.bak
+*.swp
+*.tmp
+*.env
+*.esproj.user# .gitignore para projetos Angular e .NET
 
 # Node
 node_modules/
