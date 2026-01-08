@@ -1,0 +1,54 @@
+2026-01-08 00:23:19.562 -03:00 [INF] ? Redis conectado com sucesso
+2026-01-08 00:23:21.825 -03:00 [WRN] The 'Role' property 'Role' on entity type 'User' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'NotAccess', since this is the CLR default for the 'Role' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-01-08 00:23:25.154 -03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-08 00:23:25.320 -03:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2026-01-08 00:23:25.336 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-08 00:23:25.349 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-08 00:23:25.359 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-08 00:23:25.367 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-08 00:23:25.395 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-08 00:23:25.427 -03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-08 00:23:25.430 -03:00 [INF] ? Banco de dados criado e migrations aplicadas com sucesso!
+2026-01-08 00:23:25.690 -03:00 [INF] ?? Aplicação iniciada com sucesso!
+2026-01-08 00:23:25.787 -03:00 [INF] User profile is available. Using 'C:\Users\hibit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-08 00:23:26.213 -03:00 [INF] Now listening on: https://localhost:7500
+2026-01-08 00:23:26.217 -03:00 [INF] Now listening on: http://localhost:5500
+2026-01-08 00:23:26.392 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-08 00:23:26.395 -03:00 [INF] Hosting environment: Development
+2026-01-08 00:23:26.398 -03:00 [INF] Content root path: C:\Users\hibit\source\repos\teste\back\MeuTeste\MeuTeste.Presentation
+2026-01-08 00:23:28.606 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7500/swagger/index.html - null null
+2026-01-08 00:23:28.922 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7500/swagger/index.html - 200 null text/html;charset=utf-8 329.0774ms
+2026-01-08 00:23:28.998 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7500/swagger/index.css - null null
+2026-01-08 00:23:28.999 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7500/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-08 00:23:28.998 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7500/swagger/index.js - null null
+2026-01-08 00:23:29.022 -03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-01-08 00:23:29.023 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7500/swagger/index.js - 200 null application/javascript;charset=utf-8 26.0888ms
+2026-01-08 00:23:29.030 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7500/swagger/index.css - 200 202 text/css 33.1551ms
+2026-01-08 00:23:29.045 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7500/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 46.7676ms
+2026-01-08 00:23:29.147 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7500/_vs/browserLink - null null
+2026-01-08 00:23:29.232 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7500/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.6317ms
+2026-01-08 00:23:29.756 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7500/swagger/v1/swagger.json - null null
+2026-01-08 00:23:29.812 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7500/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.3375ms
