@@ -62,3 +62,59 @@ mat-form-field {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Material Select Dropdown Styling */
+.mat-mdc-select-panel {
+  background-color: white !important;
+}
+
+.mat-mdc-select-panel-wrap {
+  background-color: white !important;
+}
+
+.mat-mdc-option {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+.mat-mdc-option:hover {
+  background-color: #667eea !important;
+  color: white !important;
+}
+
+.mat-mdc-option.mat-selected {
+  background-color: #667eea !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+.mat-mdc-option.mat-selected:hover {
+  background-color: #5568d3 !important;
+  color: white !important;
+}
+
+.mat-mdc-option:focus {
+  background-color: #f0f0f0 !important;
+}
+
+.mat-mdc-select-panel .mat-mdc-option-list {
+  background-color: white !important;
+}
+
+/* Scrollbar dentro do painel de seleção */
+.mat-mdc-select-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mat-mdc-select-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mat-mdc-select-panel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.mat-mdc-select-panel::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

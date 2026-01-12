@@ -7,3 +7,42 @@
 mat-dialog-content {
   padding: 20px 0;
 }
+
+/* Estilos para mat-select e seu painel */
+::ng-deep .mat-mdc-select-panel {
+  background-color: white !important;
+}
+
+::ng-deep .mat-mdc-select-panel-wrap {
+  background-color: white !important;
+}
+
+::ng-deep .mat-mdc-option {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+::ng-deep .mat-mdc-option:hover {
+  background-color: #667eea !important;
+  color: white !important;
+}
+
+::ng-deep .mat-mdc-option.mat-selected {
+  background-color: #667eea !important;
+  color: white !important;
+}
+
+::ng-deep .mat-mdc-option.mat-selected:hover {
+  background-color: #5568d3 !important;
+  color: white !important;
+}
+
+/* Focus state */
+::ng-deep .mat-mdc-option:focus {
+  background-color: #f0f0f0 !important;
+}
+
+/* Scrollbar do painel */
+::ng-deep .mat-mdc-select-panel .mat-mdc-option-list {
+  background-color: white !important;
+}
